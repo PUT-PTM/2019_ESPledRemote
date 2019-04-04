@@ -14,11 +14,14 @@ Client device is on the same network as the WiFi module.
     * LED ring
     * Lua
 2. Software:
-    * NodeMCU
+    * NodeMCU - soft for ESP module
+    * ESPlorer - IDE for NodeMCU
+    * WebStorm - IDE for mobile application
 3. Programming languages:
     * Lua
     * Framework7
     * Vue.js
+4.         
 ## How to run 
 
 ## How to compile 
