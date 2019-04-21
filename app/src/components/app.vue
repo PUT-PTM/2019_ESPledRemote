@@ -7,8 +7,16 @@
   <f7-panel right reveal theme-dark>
     <f7-view>
       <f7-page>
-        <f7-navbar title="Right Panel"></f7-navbar>
-        <f7-block>Right panel content goes here</f7-block>
+        <f7-block-title>Description</f7-block-title>
+        <f7-block>Wireless lighting of the LED to the color specified by the user.</f7-block>
+        <f7-block-title>Author</f7-block-title>
+        <f7-block>
+          <p>
+            <i class="fas fa-copyright"></i>
+            <span>Created by</span>
+            <a target="_blank" class="link external git-link" href="https://github.com/SG-WebDev/">SG-WebDev</a>
+          </p>
+        </f7-block>
       </f7-page>
     </f7-view>
   </f7-panel>
@@ -48,9 +56,6 @@
       }
     },
     methods: {
-      alertLoginData() {
-        this.$f7.dialog.alert('Username: ' + this.username + '<br>Password: ' + this.password);
-      }
     },
     mounted() {
       this.$f7ready((f7) => {

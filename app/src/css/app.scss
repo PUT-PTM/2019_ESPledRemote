@@ -12,3 +12,30 @@
 }
 
 /* Your app custom styles here */
+
+@import url('https://use.fontawesome.com/releases/v5.8.1/css/all.css');
+
+.navbar {
+  i {
+    font-size: 28px;
+  }
+}
+.panel {
+  .page-content {
+    background-color: #e47833;
+    color: #ffffff;
+    .block-title {
+      font-size: 18px;
+      color: #ffffff;
+      padding: 5px 0;
+      overflow: visible;
+    }
+    .block {
+      background: none;
+    }
+  }
+}
+.git-link {
+  color: #444444;
+  font-weight: 700;
+}
