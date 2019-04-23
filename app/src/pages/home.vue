@@ -22,7 +22,10 @@
       </f7-row>
       <f7-row>
         <f7-col>
-          <f7-button fill large @click="sendColor">Turn On</f7-button>
+          <f7-button fill large @click="turnOn">Turn On</f7-button>
+        </f7-col>
+        <f7-col>
+          <f7-button outline large @click="turnOff">Turn off</f7-button>
         </f7-col>
       </f7-row>
     </f7-block>
@@ -68,12 +71,23 @@
         this.bColor = parseInt(color.substring(4, 6), 16)
         console.log(`R: ${this.rColor},G: ${this.gColor},B: ${this.bColor}`);
       },
-      sendColor() {
+      turnOn() {
         this.active = true;
-        axios.get(`127.0.0.1/${this.active}/${this.rColor}/${this.gColor}/${this.bColor}`)
+        axios.get(`192.168.1.2/${this.active}/${this.rColor}/${this.gColor}/${this.bColor}`)
                 .then(response => {
                   console.log(response.data);
                   this.$f7.dialog.alert(`LED is lighted!`);
+                })
+                .catch(e => {
+                  this.errors.push(e)
+                })
+      },
+      turnOff() {
+        this.active = false;
+        axios.get(`192.168.1.2/${this.active}`)
+                .then(response => {
+                  console.log(response.data);
+                  this.$f7.dialog.alert(`Darkness is came!`);
                 })
                 .catch(e => {
                   this.errors.push(e)
