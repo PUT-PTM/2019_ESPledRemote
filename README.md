@@ -4,7 +4,7 @@
 Wireless lighting of the LED to the color specified by the user.
 ## Description  
 The client mobile application sends via API using axios library the HTTP request to turn on the LED to the specified color.
-The WiFi ESP 8266 module receive and process this query using Lua.
+The WiFi ESP 8266 module receive and process this query using NodeMCU.
 The LED connected to the module lights up as specified in the HTTP request parameters.
 Client device is on the same network as the WiFi module.
 
@@ -12,16 +12,16 @@ Client device is on the same network as the WiFi module.
 1. Physical compontent:
     * ESP 8266 WiFi module
     * LED ring
-    * Lua
 2. Software:
     * NodeMCU - soft for ESP module
     * Arduino IDE - IDE for NodeMCU
     * WebStorm - IDE for mobile application
 3. Programming languages:
-    * Lua
-    * Framework7
-    * Vue.js
-4.         
+    * C++
+    * HTML
+    * CSS
+    * Vue.js     
+    
 ## How to run 
 
 ## How to compile 
