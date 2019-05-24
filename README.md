@@ -19,8 +19,8 @@ Client device is on the same network as the WiFi module.
 3. Programming languages:
     * C++
     * HTML
-    * CSS
-    * Vue.js     
+    * CSS (SCSS)
+    * JavaScript (Vue.js)     
     
 ## How to run 
 
