@@ -1,12 +1,10 @@
 <template>
   <f7-page name="home">
-    <!-- Top Navbar -->
     <f7-navbar title="ESPledRemote">
       <f7-nav-right>
         <f7-link panel-open="right"><i class="fas fa-info-circle"></i></f7-link>
       </f7-nav-right>
     </f7-navbar>
-    <!-- Page content-->
     <f7-block>
       <f7-row>
         <f7-col>
