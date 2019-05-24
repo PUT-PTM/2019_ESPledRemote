@@ -73,7 +73,7 @@
       },
       turnOn() {
         this.active = true;
-        axios.get(`192.168.1.2/${this.active}/${this.rColor}/${this.gColor}/${this.bColor}`)
+        axios.get(`http://192.168.43.233/${this.active}/${this.rColor}/${this.gColor}/${this.bColor}`)
                 .then(response => {
                   console.log(response.data);
                   this.$f7.dialog.alert(`LED is lighted!`);
@@ -84,7 +84,7 @@
       },
       turnOff() {
         this.active = false;
-        axios.get(`192.168.1.2/${this.active}`)
+        axios.get(`http://192.168.43.233/${this.active}`)
                 .then(response => {
                   console.log(response.data);
                   this.$f7.dialog.alert(`Darkness is came!`);
