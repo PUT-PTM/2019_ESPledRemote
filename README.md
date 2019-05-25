@@ -23,9 +23,16 @@ Client device is on the same network as the WiFi module.
     * JavaScript (Vue.js)     
     
 ## How to run 
-
+You need:
+   * ESP8266 with NodeMCU
+   * Adafruit NeoPixel WS2812 LED Ring
+Connect LED ring DIN and power to ESP.
 ## How to compile 
-
+The app is installed via the Arduino IDE. The ESP8266 boards will need to be added to the Arduino IDE which is achieved as follows.
+Click File > Preferences and copy and paste the URL "http://arduino.esp8266.com/stable/package_esp8266com_index.json" into the 
+Additional Boards Manager URLs field. Click OK. Click Tools > Boards: ... > Boards Manager. Find and click on ESP8266 (using the Search 
+function may expedite this). Click on Install. After installation, click on Close and then select your ESP8266 board from the Tools > 
+Board: ... menu.
 ## License  
 MIT
 ## Credits  
