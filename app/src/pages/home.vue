@@ -26,19 +26,33 @@
           <f7-button outline large @click="turnOff">Turn off</f7-button>
         </f7-col>
       </f7-row>
+      <f7-row>
+        <f7-col>
+          <f7-button fill large round @click="an1">Animate One</f7-button>
+        </f7-col>
+        <f7-col>
+          <f7-button fill large round @click="an2">Animate Two</f7-button>
+        </f7-col>
+      </f7-row>
     </f7-block>
 
   </f7-page>
 </template>
 <style>
   #color-wheel {
-    margin: 10px auto;
+    margin: 0px auto;
   }
   .selected-color {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 5px auto;
+  }
+  .row {
     margin: 15px auto;
+  }
+  .button {
+    margin: 5px auto;
   }
 </style>
 <script>
@@ -86,6 +100,28 @@
                 .then(response => {
                   console.log(response.data);
                   this.$f7.dialog.alert(`Darkness is came!`);
+                })
+                .catch(e => {
+                  this.errors.push(e)
+                })
+      },
+      an1() {
+        this.active = true;
+        axios.get(`http://192.168.43.233/${this.active}/an1`)
+                .then(response => {
+                  console.log(response.data);
+                  this.$f7.dialog.alert(`Animation ONE!`);
+                })
+                .catch(e => {
+                  this.errors.push(e)
+                })
+      },
+      an2() {
+        this.active = true;
+        axios.get(`http://192.168.43.233/${this.active}/an2/${this.rColor}/${this.gColor}/${this.bColor}`)
+                .then(response => {
+                  console.log(response.data);
+                  this.$f7.dialog.alert(`Animation TWO!`);
                 })
                 .catch(e => {
                   this.errors.push(e)
